@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUDOKU</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+
+        </header>
+        <div id="menu" class="tela ativa">
+            <h2>SELEÇAO DE FASE</h2>
+            <div class="progresso">PROGRESSO 0/50</div>
+            <div id="fases" class="fases"></div>
+            <button class="resetar-progresso" id="botão botão-aviso">RESETAR FASES</button>
+        </div>
+        <div id="tela-inicial" class="tela">
+            <div class="controles">
+                <button class="botao-voltar" class="botao-voltar">VOLTAR</button>
+                <div id="botao-dificuldade" class="nivel-dificuldade">DIFICULDADE</div>
+            </div>
+        </div>
+        <div id="tela-tabuleiro" class="tabuleiro"></div>
+        <div class="numeros">
+            <button class="botao-numero" data-num="1">1</button>
+            <button class="botao-numero" data-num="2">2</button>
+            <button class="botao-numero" data-num="3">3</button>
+            <button class="botao-numero" data-num="4">4</button>
+            <button class="botao-numero" data-num="5">5</button>
+            <button class="botao-numero" data-num="6">6</button>
+            <button class="botao-numero" data-num="7">7</button>
+            <button class="botao-numero" data-num="8">8</button>
+            <button class="botao-numero" data-num="9">9</button>
+            <button id="apagar-botao" class="botao-apagar">BORRACHA</button>
+        </div>
+        <div id="vitorioso" class="vitoria-pop invisivel">
+            <div class="vitoria-conteudo">
+                <h2>VITORIA</h2>
+                <p>VOCE COMPLETOU A FASE</p>
+                <div class="vitoria-opcoes">
+                    <button id="proxima-fase-botao" class="botao botao1">PROXIMA FASE</button>
+                    <button id="menu-botao" class="botao botao2">MENU</button>
+                </div>
+            </div>
+        </div>
+    <script src="script.js"></script>
+</body>
+</html>
