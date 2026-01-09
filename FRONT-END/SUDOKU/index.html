@@ -5,48 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SUDOKU</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <div class="container">
         <header>
-
+            <h1>SUDOKU</h1>
+            <img src="imagens/tabuleiro-img.png" alt="meme sudoku">
+            <div id="mostrar-fase" class="hidden">Fase 1</div>
         </header>
         <div id="menu" class="tela ativa">
-            <h2>SELEÇAO DE FASE</h2>
-            <div class="progresso">PROGRESSO 0/50</div>
-            <div id="fases" class="fases"></div>
-            <button class="resetar-progresso" id="botão botão-aviso">RESETAR FASES</button>
+            <h2>SELEÇÃO DE FASE</h2>
+            <div class="progresso">PROGRESSO <span id="texto-progresso">0/50</span></div>
+            <div id="grade-fases" class="grade-fases"></div>
+            <button id="btn-resetar" class="botao-resetar">RESETAR FASES</button>
         </div>
-        <div id="tela-inicial" class="tela">
+        <div id="tela-jogo" class="tela">
             <div class="controles">
-                <button class="botao-voltar" class="botao-voltar">VOLTAR</button>
-                <div id="botao-dificuldade" class="nivel-dificuldade">DIFICULDADE</div>
+                <button id="botao-voltar" class="botao-voltar">VOLTAR</button>
+                <div id="texto-dificuldade" class="nivel-dificuldade">FÁCIL</div>
             </div>
-        </div>
-        <div id="tela-tabuleiro" class="tabuleiro"></div>
-        <div class="numeros">
-            <button class="botao-numero" data-num="1">1</button>
-            <button class="botao-numero" data-num="2">2</button>
-            <button class="botao-numero" data-num="3">3</button>
-            <button class="botao-numero" data-num="4">4</button>
-            <button class="botao-numero" data-num="5">5</button>
-            <button class="botao-numero" data-num="6">6</button>
-            <button class="botao-numero" data-num="7">7</button>
-            <button class="botao-numero" data-num="8">8</button>
-            <button class="botao-numero" data-num="9">9</button>
-            <button id="apagar-botao" class="botao-apagar">BORRACHA</button>
+            <div id="tela-tabuleiro" class="tabuleiro"></div>
+            <div class="numeros">
+                <button class="botao-numero" data-num="1">1</button>
+                <button class="botao-numero" data-num="2">2</button>
+                <button class="botao-numero" data-num="3">3</button>
+                <button class="botao-numero" data-num="4">4</button>
+                <button class="botao-numero" data-num="5">5</button>
+                <button class="botao-numero" data-num="6">6</button>
+                <button class="botao-numero" data-num="7">7</button>
+                <button class="botao-numero" data-num="8">8</button>
+                <button class="botao-numero" data-num="9">9</button>
+                <button id="apagar-botao" class="botao-acao">🗑️</button>
+            </div>
         </div>
         <div id="vitorioso" class="vitoria-pop invisivel">
             <div class="vitoria-conteudo">
-                <h2>VITORIA</h2>
-                <p>VOCE COMPLETOU A FASE</p>
+                <h2>FASE CONCLUIDA</h2>
+                <p>VOCÊ JÁ PODE AVANÇAR <span id="num-fase-concluida"></span></p>
                 <div class="vitoria-opcoes">
-                    <button id="proxima-fase-botao" class="botao botao1">PROXIMA FASE</button>
-                    <button id="menu-botao" class="botao botao2">MENU</button>
+                    <button id="proxima-fase-botao" class="botao botao-primario">PRÓXIMA FASE</button>
+                    <button id="menu-botao" class="botao botao-secundario">MENU</button>
                 </div>
             </div>
         </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
